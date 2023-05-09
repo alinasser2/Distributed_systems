@@ -28,7 +28,7 @@ int main(int argc, char** argv)
 
     int received_from_parent = -1;
     if (rank != 0) {
-        MPI_Recv(&received_from_parent, 1, MPI_INT, parent, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+        MPI_Recv(&received_from_parent, 1, MPI_INT, parent, 0, MPI_COMM_WORLD);
     }
 
     double end_time = MPI_Wtime();
